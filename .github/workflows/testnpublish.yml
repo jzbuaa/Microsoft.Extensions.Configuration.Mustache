@@ -14,12 +14,12 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - name: Build with dotnet
-      run: dotnet test .\test\Microsoft.Extensions.Configuration.Mustache.UnitTest.csproj
+      run: dotnet test test/
     - name: Publish NuGet
       uses: rohith/publish-nuget@v2.1.1
       with:
         # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: .\src\Microsoft.Extensions.Configuration.Mustache.csproj
+        PROJECT_FILE_PATH: src/Microsoft.Extensions.Configuration.Mustache.csproj
         # Filepath containing version info, relative to root of repository. Defaults to `PROJECT_FILE_PATH` if not specified
         # VERSION_FILE_PATH: # optional
         # Regex (with version in a capturing group) to extract the version from `VERSION_FILE_PATH`
